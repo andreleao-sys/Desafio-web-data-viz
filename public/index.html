@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Página Inicial</title>
+  <title>BioLumie | Página Inicial</title>
 
-    <script src="./js/sessao.js"></script>
+  <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="icon" href="./assets/imgs/logo-branca.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3020/3020406.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
+  <header id="header">
     <div class="header">
       <div class="container">
 
@@ -37,41 +38,140 @@
         </ul>
       </div>
     </div>
-  
+  </header>
+
+  <body>
+    <!-- BANNER -->
     <div class="banner">
       <div class="container">
         <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
       </div>
     </div>
-  
+
+    <br><br>
+
+    <div id="card">
+      <div id="lado_texto">
+        <p id="titulo_card">Origem da Orquídea Phalaenopsis </p>
+        <span id="texto">
+          A orquídea Phalaenopsis, conhecida popularmente como
+
+          orquídea borboleta, é uma das variedades mais conhecidas
+
+          e apreciadas do gênero Phalaenopsis, que é originário das
+
+          regiões tropicais do sudeste asiático.
+          <br><br>
+          A Phalaenopsis é originária de várias espécies originárias da Polinésia, gerando dezenas de cultivares com
+          flores das mais variadas cores. A planta é comumente encontrada em países como Tailândia, Indonésia, Filipinas
+          e Malásia. E a partir das diversas espécies da natureza surgiu uma enorme diversidade de híbridos com cores e
+          formatos variados e maravilhosos!
+
+
+        </span>
+      </div>
+
+      <!-- Carrossel -->
+      <div class="carrossel">
+        <div class="carrossel_circulos" id="carrossel">
+          <img src="" alt="">
+          <img src="https://symphony.com.br/wp-content/uploads/2024/07/Phalaenopsis-estufa.jpg" alt=""
+            class="circulo primeiro" onclick="trocar()" type="text" />
+          <img src="https://symphony.com.br/wp-content/uploads/2024/07/Phalaenopsis-estufa.jpg" alt=""
+            class="circulo segundo" onclick="trocar()" />
+          <img src="https://symphony.com.br/wp-content/uploads/2024/07/Phalaenopsis-estufa.jpg" alt=""
+            class="circulo terceiro" onclick="trocar()" />
+          <img src="https://symphony.com.br/wp-content/uploads/2024/07/Phalaenopsis-estufa.jpg" alt=""
+            class="circulo quarto" onclick="trocar()" />
+        </div>
+      </div>
+    </div>
+
+    <!-- MISSÃO VISÃO VALORES -->
     <div class="social">
       <div class="container">
         <div class="boxes">
           <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
+            <img src="https://cdn-icons-png.flaticon.com/128/2238/2238049.png">
             <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+            <p>Desenvolver soluções tecnológicas para monitorar e controlar a luminosidade e a umidade em estufas
+              botânicas, promovendo um ambiente ideal para
+              o cultivo sustentável de orquídeas e a preservação de borboletas.</p>
           </div>
           <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
+            <img src="https://cdn-icons-png.flaticon.com/128/5405/5405163.png">
             <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+            <p>Ser referência em inovação ecológica, integrando tecnologia e natureza para otimizar o cultivo de
+              espécies sensíveis
+              e fomentar a educação ambiental no Brasil e no mundo.</p>
           </div>
           <div class="box">
-            <img src="assets/imgs/growth_color.png">
+            <img src="https://cdn-icons-png.flaticon.com/128/9792/9792952.png">
             <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+            <p>Sustentabilidade • Inovação • Precisão • Bem-estar ambiental • Colaboração</p>
           </div>
         </div>
       </div>
     </div>
-  
+      <section id="simulador">
+    <div class="simulador">
+      <div class="titulocalc">
+        <p>A perda de orquídeas afeta não apenas a <span style="color: rgb(229, 229, 231);">produção</span>, <br>
+          mas também a <span style="color: rgb(255, 255, 255);">sustentabilidade da sua estufa!</span></p>
+      </div>
+
+      <div class="desc">
+        <p>Veja o quanto você pode economizar com a solução <strong>BorboLumen</strong></p>
+      </div>
+
+      <div class="calculo">
+        <div class="inputs">
+          <div class="especifico">
+            <label for="ipt_nome_sim">Nome da empresa:</label>
+            <input type="text" id="ipt_nome_sim">
+
+            <label for="ipt_tamanho">Porte da empresa:</label>
+
+            <select id="ipt_tamanho">
+              <option value="selecione">Selecione</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="médio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+
+            <label for="ipt_custoLote">Custo por lote (R$):</label>
+            <input type="number" id="ipt_custoLote">
+
+            <label for="ipt_loteMes">Lotes por mês:</label>
+            <input type="number" id="ipt_loteMes">
+
+            <label for="ipt_risco">Nível de risco de exposição à luz inadequada:</label>
+            <select id="ipt_risco">
+              <option value="selecione">Selecione</option>
+              <option value="muito baixo">Muito Baixo</option>
+              <option value="baixo">Baixo</option>
+              <option value="médio">Médio</option>
+              <option value="alto">Alto</option>
+              <option value="muito alto">Muito Alto</option>
+            </select>
+
+            <div class="btn-calculo">
+              <button onclick="calcular()">Calcular economia</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="resultado" id="resultado">
+          <h3><span style="color: rgb(255, 255, 255);">Resultado</span></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- FOOTER -->
     <div class="footer">
       <div class="container">
         <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
@@ -79,5 +179,30 @@
       </div>
     </div>
   </body>
+
+</body>
+
+<script>
+  function trocar() {
+    const primeiro = document.querySelector(".primeiro")
+    const segundo = document.querySelector(".segundo")
+    const terceiro = document.querySelector(".terceiro")
+    const quarto = document.querySelector(".quarto")
+
+    terceiro.classList.replace("terceiro", "segundo")
+    primeiro.classList.add("primeiro-lado")
+    segundo.classList.add("segundo-lado")
+
+    setTimeout(() => {
+      primeiro.classList.replace("primeiro", "quarto")
+      segundo.classList.replace("segundo", "primeiro")
+      quarto.classList.replace("quarto", "terceiro")
+    }, 1600
+    )
+    quarto.classList.remove("primeiro-lado")
+    primeiro.classList.remove("segundo-lado")
+  }
+
+</script>
 
 </html>
