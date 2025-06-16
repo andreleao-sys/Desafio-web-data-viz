@@ -115,6 +115,63 @@
         </div>
       </div>
     </div>
+      <section id="simulador">
+    <div class="simulador">
+      <div class="titulocalc">
+        <p>A perda de orquídeas afeta não apenas a <span style="color: rgb(229, 229, 231);">produção</span>, <br>
+          mas também a <span style="color: rgb(255, 255, 255);">sustentabilidade da sua estufa!</span></p>
+      </div>
+
+      <div class="desc">
+        <p>Veja o quanto você pode economizar com a solução <strong>BorboLumen</strong></p>
+      </div>
+
+      <div class="calculo">
+        <div class="inputs">
+          <div class="especifico">
+            <label for="ipt_nome_sim">Nome da empresa:</label>
+            <input type="text" id="ipt_nome_sim">
+
+            <label for="ipt_tamanho">Porte da empresa:</label>
+
+            <select id="ipt_tamanho">
+              <option value="selecione">Selecione</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="médio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+
+            <label for="ipt_custoLote">Custo por lote (R$):</label>
+            <input type="number" id="ipt_custoLote">
+
+            <label for="ipt_loteMes">Lotes por mês:</label>
+            <input type="number" id="ipt_loteMes">
+
+            <label for="ipt_risco">Nível de risco de exposição à luz inadequada:</label>
+            <select id="ipt_risco">
+              <option value="selecione">Selecione</option>
+              <option value="muito baixo">Muito Baixo</option>
+              <option value="baixo">Baixo</option>
+              <option value="médio">Médio</option>
+              <option value="alto">Alto</option>
+              <option value="muito alto">Muito Alto</option>
+            </select>
+
+            <div class="btn-calculo">
+              <button onclick="calcular()">Calcular economia</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="resultado" id="resultado">
+          <h3><span style="color: rgb(255, 255, 255);">Resultado</span></h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- FOOTER -->
     <div class="footer">
