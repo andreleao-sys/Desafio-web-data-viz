@@ -40,7 +40,7 @@ CREATE TABLE estufa (
 CREATE TABLE medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	umidade DECIMAL(5,2),
-	luminosidade DECIMAL(5,2),
+	luminosidade INT,
 	momento DATETIME,
 	fk_estufa INT,
 	FOREIGN KEY (fk_estufa) REFERENCES estufa(id)
