@@ -70,7 +70,7 @@ function trocar_login_alerta() {
     main.style = "filter: blur(0px);  "
 }
 function cadastrar() {
-    let nome_usuario = ipt_nome_usuario_cad.value
+    let nome_usuario = ipt_nome_do_usario_cad.value
     let email = ipt_email.value
     let senha = ipt_senha_cad.value
     let conf_senha = ipt_conf_senha.value
