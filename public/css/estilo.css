@@ -23,7 +23,7 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 2px solid  #2c0a48;
 }
 
 .header .container {
@@ -229,7 +229,7 @@ body {
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -246,7 +246,7 @@ body {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -296,15 +296,123 @@ input {
 
 /* SIMULADOR */
 
+/* SIMULADOR */
+
 .simulador {
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .simulador .container {
   flex-direction: column;
-  overflow: scroll; 
+  overflow: scroll;
   height: var(--tamanho-simulador);
 }
+
+.titulocalc p {
+  margin-top: 10vh;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.desc p {
+  text-align: center;
+}
+
+.calculo {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inputs {
+  height: 100%;
+  width: 40%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+}
+
+.inputs input,
+.inputs select {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #851caf4e;
+  border-radius: 20px;
+  padding-left: 3vh;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin-top: 10px;
+   color: white;
+}
+
+.inputs h3 {
+  text-align: center;
+}
+
+
+
+
+input:focus,
+select:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.especifico {
+  height: 100%;
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 2vh;
+}
+
+.resultado {
+  height: 100%;
+  width: 40%;
+  margin-left: 20px;
+  margin-top: 5vh;
+}
+
+.resultado h3 {
+  text-align: center;
+}
+
+.btn-calculo {
+  margin-top: 3vh;
+  margin-left: 30%;
+}
+
+.btn-calculo button {
+  border: none;
+  height: 35px;
+  width: 150px;
+  border-radius: 30px;
+  background-color: #8a16c0;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.divider {
+  width: 2px;
+  background-color: #8a16c0;
+  height: 350px;
+  margin-top: 12vh;
+}
+
+
+
 
 /* ALERTA */
 
@@ -346,9 +454,23 @@ input {
 }
 
 @keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+  0% {
+    transform: rotate(25deg)
+  }
+
+  25% {
+    transform: rotate(-25deg)
+  }
+
+  50% {
+    transform: rotate(25deg)
+  }
+
+  75% {
+    transform: rotate(-25deg)
+  }
+
+  100% {
+    transform: rotate(25deg)
+  }
 }

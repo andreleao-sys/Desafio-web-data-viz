@@ -2,81 +2,185 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Simulador</title>
+  <title>AquaTech | Simulador</title>
 
-    <script src="./js/sessao.js"></script>
+  <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="icon" href="./assets/icon/favicon2.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">Inicial</a>
-                </li>
-                <li class="agora">Simulador</li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li>
-                    <a href="./login.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
+  <!--header inicio-->
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo"></h1>
+      <ul class="navbar">
+        <li>
+          <a href="./index.html">Inicial</a>
+        </li>
+        <li class="agora">Simulador</li>
+        <li>|</li>
+        <li>
+          <a href="./login.html">Login</a>
+        </li>
+        <li>
+          <a href="./login.html">Cadastro</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
 
-    <!-- simulador inicio -->
+
+  <section id="simulador">
     <div class="simulador">
-        <div class="container">
-            <h2>Simulador</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
+      <div class="titulocalc">
+        <p>A perda de orquídeas afeta não apenas a <span style="color: rgb(229, 229, 231);">produção</span>, <br>
+          mas também a <span style="color: rgb(255, 255, 255);">sustentabilidade da sua estufa!</span></p>
+      </div>
 
-        </div>
-    </div>
-    <!-- simulador fim -->
+      <div class="desc">
+        <p>Veja o quanto você pode economizar com a solução <strong>BorboLumen</strong></p>
+      </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+      <div class="calculo">
+        <div class="inputs">
+          <div class="especifico">
+            <label for="ipt_nome_sim">Nome da empresa:</label>
+            <input type="text" id="ipt_nome_sim">
+
+            <label for="ipt_tamanho">Porte da empresa:</label>
+
+            <select id="ipt_tamanho">
+              <option value="selecione">Selecione</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="médio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+
+            <label for="ipt_custoLote">Custo por lote (R$):</label>
+            <input type="number" id="ipt_custoLote">
+
+            <label for="ipt_loteMes">Lotes por mês:</label>
+            <input type="number" id="ipt_loteMes">
+
+            <label for="ipt_risco">Nível de risco de exposição à luz inadequada:</label>
+            <select id="ipt_risco">
+              <option value="selecione">Selecione</option>
+              <option value="muito baixo">Muito Baixo</option>
+              <option value="baixo">Baixo</option>
+              <option value="médio">Médio</option>
+              <option value="alto">Alto</option>
+              <option value="muito alto">Muito Alto</option>
+            </select>
+
+            <div class="btn-calculo">
+              <button onclick="calcular()">Calcular economia</button>
+            </div>
+
+          </div>
         </div>
+
+        <div class="divider"></div>
+
+        <div class="resultado" id="resultado">
+          <h3><span style="color: rgb(255, 255, 255);">Resultado</span></h3>
+        </div>
+      </div>
     </div>
-    <!--footer fim-->
+  </section>
+
+
 
 
 </body>
 
 </html>
+
+
+<script>
+  function calcular() {
+    resultado.innerHTML = '';
+    var ax_nome = ipt_nome_sim.value;
+    var ax_tamanho = ipt_tamanho.value;
+    var ax_custoLote = Number(ipt_custoLote.value);
+    var ax_loteporMes = Number(ipt_loteMes.value);
+    var ax_risco = ipt_risco.value;
+
+    if (!ax_nome || !ax_tamanho || !ax_custoLote || !ax_loteporMes || !ax_risco) {
+      alert('Preencha todos os campos corretamente antes de continuar.');
+      return;
+    }
+    var custoMonitoramento, mesPerdeLote;
+    if (ax_tamanho == 'pequeno') {
+      custoMonitoramento = 5000;
+      mesPerdeLote = 3;
+    } else if (ax_tamanho == 'médio') {
+      custoMonitoramento = 10000;
+      mesPerdeLote = 2;
+    } else {
+      custoMonitoramento = 15000;
+      mesPerdeLote = 1;
+    }
+
+    var custoMulta, custoInterdicao;
+    if (ax_risco == 'muito baixo') {
+      custoMulta = 0.5;
+      custoInterdicao = 0;
+    } else if (ax_risco == 'baixo') {
+      custoMulta = 0.75;
+      custoInterdicao = 0;
+    } else if (ax_risco == 'médio') {
+      custoMulta = 1;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    } else if (ax_risco == 'alto') {
+      custoMulta = 1.25;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    } else {
+      custoMulta = 1.5;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    }
+
+    var perdaLote = ax_custoLote * (12 / mesPerdeLote);
+    var multaTotal = custoMulta + custoInterdicao;
+    var ganhoMonitoramento = (multaTotal * 1000000) + perdaLote - custoMonitoramento;
+
+    function formatar(valor) {
+      if (valor >= 1000000000) return `R$${(valor / 1e9).toFixed(3)} bilhões`;
+      if (valor >= 1000000) return `R$${(valor / 1e6).toFixed(3)} milhões`;
+      if (valor >= 1000) return `R$${(valor / 1e3).toFixed(3)} mil`;
+      return `R$${valor.toFixed(2)}`;
+    }
+
+    var perdaFormatada = formatar(perdaLote);
+    var multaValor = multaTotal * 1000000;
+    var multaFormatada = formatar(multaValor);
+    var perdaTotalValor = multaValor + perdaLote;
+    var perdaTotalFormatada = formatar(perdaTotalValor);
+    var custoFormatado = formatar(custoMonitoramento);
+    var ganhoFormatado = formatar(ganhoMonitoramento);
+
+    resultado.innerHTML = `
+        <br>
+        <h3>Bem-vindo(a), ${ax_nome}!</h3>
+        Com base em dados do setor botânico e perdas comuns na produção de orquídeas sensíveis à luminosidade, como a orquídea borbovara:
+        <br><br>
+        Sua empresa, sendo de <u>porte ${ax_tamanho}</u>, pode perder até <b>${perdaFormatada}</b> ao ano sem o controle adequado de luminosidade.
+        <br><br>
+        Com risco <u>${ax_risco}</u>, os danos podem ultrapassar <b>${multaFormatada}</b> entre perdas indiretas, descarte de plantas e impactos em produtividade.
+        <br><br>
+        O impacto total pode chegar a <b>${perdaTotalFormatada}</b>!
+        <br><br>
+        Investindo apenas <b>${custoFormatado}</b> na nossa solução de monitoramento, o potencial de economia pode chegar a <b>${ganhoFormatado}</b> ao ano.
+        <br><br>
+        🌿 Garanta a qualidade das suas orquídeas e a saúde financeira da sua botânica!
+      `;
+  }
+</script>
