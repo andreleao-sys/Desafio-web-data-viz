@@ -1,14 +1,6 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+CREATE DATABASE bioLumen;
 
-/*
-comandos para mysql server
-*/
-
-CREATE DATABASE aquatech;
-
-USE aquatech;
+USE bioLumen;
 
 CREATE TABLE empresa (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -26,6 +18,7 @@ CREATE TABLE usuario (
 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
+-- Avisos (ex: alertas de umidade ou luminosidade)
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
@@ -34,29 +27,30 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
+-- Estufas de cultivo de orquídeas
+CREATE TABLE estufa (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	descricao VARCHAR(300),
+	localizacao VARCHAR(100),
 	fk_empresa INT,
 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
+-- Medidas de sensores (somente umidade e luminosidade)
+CREATE TABLE medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
+	umidade DECIMAL(5,2),
+	luminosidade DECIMAL(5,2),
 	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+	fk_estufa INT,
+	FOREIGN KEY (fk_estufa) REFERENCES estufa(id)
 );
 
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+-- Dados de exemplo
+INSERT INTO empresa (razao_social, cnpj, codigo_ativacao) VALUES 
+('Orquidário Borboleta Azul', '12345678000199', 'ORQ-BL2025'),
+('Estufa Encanto Verde', '98765432000111', 'ENC-VERD123');
+
+INSERT INTO estufa (descricao, localizacao, fk_empresa) VALUES 
+('Estufa Bonatina Tropical', 'Zona Norte - SP', 1),
+('Estufa das Orquídeas Nobres', 'Zona Sul - SP', 2);
