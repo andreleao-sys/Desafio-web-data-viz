@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login & Cadastro | Shadow Slave </title>
+  <link rel="icon" href="assets/img/img_topo.png">
+
+  <script src="./js/sessao.js"></script>
+  <link rel="stylesheet" href="css/cadastro-login.css">
+</head>
+
+<body onload="listar()">
+  <a href="index.html"><img src="assets/svg/sair.svg" alt="" id="sair_icone"></a>
+  <main id="main">
+    <div class="imagem_fundo" id="imagem_de_fundo"></div>
+    <!--FORMULARIO DE LOGIN_________________________________________________________-->
+    <div class="cadastro-login">
+      <div class="column-login" id="container_login">
+        <div class="card-login" id="provando">
+          <p id="titulo">Iniciar Sessão</p>
+          <p id="subtitulo">Não possui uma conta?<span onclick="trocar_cadastro()"
+              style="color: grey; text-decoration: underline; cursor: pointer;">Acesse aqui</span></p>
+          <div><img src="assets/svg/user.svg" alt="">
+            <p id="texto_nome_usuario">E-mail</p>
+          </div>
+          <input type="text" id="ipt_nome_usuario" onclick="digitando_login('nome_usuario')"
+            oninput="digitando_login('nome_usuario')">
+          <div><img src="assets/svg/lock-closed.svg" alt="">
+            <p id="texto_senha">Senha</p>
+          </div>
+          <input type="password" id="ipt_senha" onclick="digitando_login('senha')" oninput="digitando_login('senha')">
+          <img src="assets/svg/olho_fechado.svg" onclick="mostrar_senha_log()" class="imagem_cad" id="icone_senha_log">
+          <button onclick="verificar()">ENTRAR</button>
+          <p id="subtitulo" style="opacity: 0;">Esqueceu a senha?<span><a onclick="activar_esqueci()"
+                style="color: grey; text-decoration: underline; opacity: 0;">Acesse aqui</a></span></p>
+        </div>
+      </div>
+      <div class="column-cadastro">
+        <!--_____________________________________________________FORMULARIO DE CADASTRO____-->
+        <div class="card-login">
+          <p id="titulo">Cadastro</p>
+          <div>
+            <img src="assets/svg/user.svg" alt="">
+            <p id="texto_nome_usuario_cad">Código de ativação</p>
+          </div>
+          <input type="text" id="ipt_nome_usuario_cad" onclick="digitando_cad('nome_usuario_cad')"
+            oninput="digitando_cad('nome_usuario_cad')" oninput="procurar_nome()">
+          <span id="resultado_nome" style="display: none;"></span>
+          <div>
+            <img src="assets/svg/mail.svg" alt="">
+            <p id="texto_nome_do_usario_cad">Nome</p>
+          </div>
+          <span id="nome_do_usario_cad_condicao"></span>
+          <input type="text" id="ipt_nome_do_usario_cad" onclick="digitando_cad('nome_do_usario_cad')" oninput="digitando_cad('nome')">
+          <div>
+            <img src="assets/svg/mail.svg" alt="">
+            <p id="texto_email">Email</p>
+          </div>
+          <span id="email_condicao"></span>
+          <input type="email" id="ipt_email" onclick="digitando_cad('email')" oninput="digitando_cad('email')">
+          <div>
+            <img src="assets/svg/lock-closed.svg" alt="">
+            <p id="texto_senha_cad">Senha </p>
+
+
+          </div>
+          <input type="password" id="ipt_senha_cad" onclick="digitando_cad('senha_cad')"
+            oninput="digitando_cad('senha_cad')">
+          <img src="assets/svg/invisible-password-icon.svg" class="imagem_cad" onclick="mostrar_senha()"
+            id="icone_senha_cad">
+          <div>
+            <img src="assets/svg/lock-closed.svg" alt="">
+            <p id="texto_conf_senha">Confirmar Senha</p>
+          </div>
+          <input type="password" id="ipt_conf_senha" onclick="digitando_cad('conf_senha')"
+            oninput="digitando_cad('conf_senha')">
+          <img src="assets/svg/invisible-password-icon.svg" onclick="mostrar_senha()" class="imagem_cad"
+            id="icone_senha_cad_conf">
+          <div id="recomendacao_senha">
+            <ul>
+              <li id="minusculo">Um caractere minúsculo </li>
+              <li id="maiusculo">Um caractere maiúsculo</li>
+              <li id="numero">Um número</li>
+            </ul>
+            <ul>
+              <li id="especial">Um caractere especial</li>
+              <li id="minimo">Mínimo de 8 caracteres</li>
+            </ul>
+          </div>
+          <button onclick="cadastrar()">CADASTRAR-SE</button>
+          <p id="subtitulo">Já possui uma conta?<span onclick="trocar_login()"
+              style="color: #658a87; text-decoration: underline; cursor: pointer;">Acesse aqui</span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div class="esqueci_senha" id="cartao_esqueci_senha" style="display: none;">
+    <div class="imagem_logo">
+
+    </div>
+    <p>Esqueceu a senha?</p>
+    <p>Iremos te ajudar a recuperar a sua conta</p>
+    <p id="placeholder"> <img src="assets/img/github.png" alt="">Porfavor Informe o seu email</p>
+    <input type="email" onclick="esqueci()" id="ipt_esqueci_senha">
+  </div>
+  <div id="div_alerta" style="display: none;">
+    <img src="assets/img/sunny_chibi.png" alt="" id="sunny_chibi">
+    <p id="titulo_erro">
+      Senha incorreta
+    </p>
+    <p id="mensagem_erro">
+      Se nem sua própria senha te reconhece… quem é você, afinal?
+    </p>
+    <button onclick="tirar_alerta()" id="bottom_mensagem">OK</button>
+  </div>
+  <div id="div_cad_sucesso" style="display: none;">
+    <img src="assets/img/sunny_feliz.png" alt="" id="sunny_cad">
+    <p id="titulo_cad">
+      Cadastro realizado com sucesso
+    </p>
+    <p id="mensagem_cad">
+      Sunny sorri nas trevas — o pacto está feito e o ouro já brilha no seu destino!
+    </p>
+    <p id="bottom_mensagem_cad" onclick="trocar_login_alerta()">FAZER LOGIN</p>
+  </div>
+  <a href="game.html" id="conv_esquerda" style="display: none;">Entrar como convidado</a>
+  <a href="game.html" id="conv_direita" style="display: none;">Entrar como convidado</a>
+  <script src="js/cadastro-login.js"></script>
+</body>
+
+</html>
+<script>
+
+</script>
