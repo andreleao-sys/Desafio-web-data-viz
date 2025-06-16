@@ -1,6 +1,6 @@
-CREATE DATABASE bioLumen;
+CREATE DATABASE borboLumen;
 
-USE bioLumen;
+USE borboLumen;
 
 CREATE TABLE empresa (
 	id INT PRIMARY KEY AUTO_INCREMENT,
