@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./css/estilo.css">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3020/3020406.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,6 +35,7 @@
           <ul>
             <li><a href="#hero" data-after="Home">Inicio</a></li>
             <li><a href="#sobre" data-after="Sobre">Sobre</a></li>
+            <li><a href="#simulador" data-after="simulador">Simulador</a></li>
             <li><a href="">|</a></li>
             <li><a href="./login.html" data-after="Login">Login</a></li>
             <li><a href="./cadastro.html" data-after="Cadastro">Cadastro</a></li>
@@ -46,11 +49,136 @@
     <!-- BANNER -->
     <div class="banner">
       <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
+        <p style="color: white;">Monitorar é mais do que medir: é entender as necessidades de cada orquídea, garantir o equilíbrio do seu ambiente e preservar a beleza que inspira gerações futuras.</p>
       </div>
     </div>
 
-    <br><br>
+    <br><br><br>
+    <section class="servicos">
+      <div class="titulo">
+        <center>
+          <h2>Nossos Serviços</h2>
+          <p>Conheça as soluções tecnológicas para preservar e cultivar sua estufa de orquídeas borboleta com eficiência
+            e
+            sustentabilidade.</p>
+        </center>
+      </div>
+
+      <div class="container">
+        <div class="column-1">
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #4CAF50;">sensors</span>
+            <h5>Monitoramento Ambiental</h5>
+            <p>
+              Sensores de alta precisão para medir umidade e luminosidade, garantindo condições ideais para o cultivo
+              das orquídeas.
+            </p>
+          </div>
+
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #FF9800;">notifications_active</span>
+            <h5>Alertas Inteligentes</h5>
+            <p>
+              Receba notificações em tempo real sobre mudanças críticas nas condições ambientais da estufa.
+            </p>
+          </div>
+        </div>
+
+        <div class="column-2">
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #3F51B5;">bar_chart</span>
+            <h5>Análise de Crescimento</h5>
+            <p>
+              Acompanhe os padrões de crescimento e floração com relatórios baseados em dados ambientais coletados.
+            </p>
+          </div>
+
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #009688;">dashboard</span>
+            <h5>Dashboard de Monitoramento</h5>
+            <p>
+              Visualize os dados da sua estufa em gráficos e painéis dinâmicos, direto de qualquer dispositivo.
+            </p>
+          </div>
+        </div>
+
+        <div class="column-3">
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #9C27B0;">eco</span>
+            <h5>Consultoria Botânica</h5>
+            <p>
+              Suporte especializado com recomendações para melhorar o ambiente de cultivo das suas orquídeas.
+            </p>
+          </div>
+
+          <div class="card" style="background-color: #5548c841;">
+            <span class="material-icons" style="font-size: 50px; color: #F44336;">wifi</span>
+            <h5>Integração IoT</h5>
+            <p>
+              Controle remoto da sua estufa com dispositivos IoT: irrigação, iluminação e ventilação automatizadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador">
+      <div class="simulador">
+        <div class="titulocalc">
+          <p>A perda de orquídeas afeta não apenas a <span style="color: rgb(229, 229, 231);">produção</span>, <br>
+            mas também a <span style="color: rgb(255, 255, 255);">sustentabilidade da sua estufa!</span></p>
+        </div>
+
+        <div class="desc">
+          <p>Veja o quanto você pode economizar com a solução <strong>BorboLumen</strong></p>
+        </div>
+
+        <div class="calculo">
+          <div class="inputs">
+            <div class="especifico">
+              <label for="ipt_nome_sim">Nome da empresa:</label>
+              <input type="text" id="ipt_nome_sim">
+
+              <label for="ipt_tamanho">Porte da empresa:</label>
+
+              <select id="ipt_tamanho">
+                <option value="selecione">Selecione</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="médio">Médio</option>
+                <option value="grande">Grande</option>
+              </select>
+
+              <label for="ipt_custoLote">Custo por lote (R$):</label>
+              <input type="number" id="ipt_custoLote">
+
+              <label for="ipt_loteMes">Lotes por mês:</label>
+              <input type="number" id="ipt_loteMes">
+
+              <label for="ipt_risco">Nível de risco de exposição à luz inadequada:</label>
+              <select id="ipt_risco">
+                <option value="selecione">Selecione</option>
+                <option value="muito baixo">Muito Baixo</option>
+                <option value="baixo">Baixo</option>
+                <option value="médio">Médio</option>
+                <option value="alto">Alto</option>
+                <option value="muito alto">Muito Alto</option>
+              </select>
+
+              <div class="btn-calculo">
+                <button onclick="calcular()">Calcular economia</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="resultado" id="resultado">
+            <h3><span>Resultado</span></h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div id="card">
       <div id="lado_texto">
@@ -68,8 +196,6 @@
           flores das mais variadas cores. A planta é comumente encontrada em países como Tailândia, Indonésia, Filipinas
           e Malásia. E a partir das diversas espécies da natureza surgiu uma enorme diversidade de híbridos com cores e
           formatos variados e maravilhosos!
-
-
         </span>
       </div>
 
@@ -89,40 +215,15 @@
       </div>
     </div>
 
-    <!-- MISSÃO VISÃO VALORES -->
-    <div class="social">
+    <footer>
       <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="https://cdn-icons-png.flaticon.com/128/2238/2238049.png">
-            <h4>Missão</h4>
-            <p>Desenvolver soluções tecnológicas para monitorar e controlar a luminosidade e a umidade em estufas
-              botânicas, promovendo um ambiente ideal para
-              o cultivo sustentável de orquídeas e a preservação de borboletas.</p>
-          </div>
-          <div class="box">
-            <img src="https://cdn-icons-png.flaticon.com/128/5405/5405163.png">
-            <h4>Visão</h4>
-            <p>Ser referência em inovação ecológica, integrando tecnologia e natureza para otimizar o cultivo de
-              espécies sensíveis
-              e fomentar a educação ambiental no Brasil e no mundo.</p>
-          </div>
-          <div class="box">
-            <img src="https://cdn-icons-png.flaticon.com/128/9792/9792952.png">
-            <h4>Valores</h4>
-            <p>Sustentabilidade • Inovação • Precisão • Bem-estar ambiental • Colaboração</p>
-          </div>
+        <center>
+          <div class="footer-content">
+            <p>© 2025 Borbo Lume - Monitoramento de Umidade e luminosidade em Estufas</p>
         </div>
+        </center>
       </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
-    </div>
+  </footer>
   </body>
 
 </body>
@@ -146,6 +247,84 @@
     )
     quarto.classList.remove("primeiro-lado")
     primeiro.classList.remove("segundo-lado")
+  }
+
+  function calcular() {
+    resultado.innerHTML = '';
+    var ax_nome = ipt_nome_sim.value;
+    var ax_tamanho = ipt_tamanho.value;
+    var ax_custoLote = Number(ipt_custoLote.value);
+    var ax_loteporMes = Number(ipt_loteMes.value);
+    var ax_risco = ipt_risco.value;
+
+    if (!ax_nome || !ax_tamanho || !ax_custoLote || !ax_loteporMes || !ax_risco) {
+      alert('Preencha todos os campos corretamente antes de continuar.');
+      return;
+    }
+    var custoMonitoramento, mesPerdeLote;
+    if (ax_tamanho == 'pequeno') {
+      custoMonitoramento = 5000;
+      mesPerdeLote = 3;
+    } else if (ax_tamanho == 'médio') {
+      custoMonitoramento = 10000;
+      mesPerdeLote = 2;
+    } else {
+      custoMonitoramento = 15000;
+      mesPerdeLote = 1;
+    }
+
+    var custoMulta, custoInterdicao;
+    if (ax_risco == 'muito baixo') {
+      custoMulta = 0.5;
+      custoInterdicao = 0;
+    } else if (ax_risco == 'baixo') {
+      custoMulta = 0.75;
+      custoInterdicao = 0;
+    } else if (ax_risco == 'médio') {
+      custoMulta = 1;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    } else if (ax_risco == 'alto') {
+      custoMulta = 1.25;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    } else {
+      custoMulta = 1.5;
+      custoInterdicao = (ax_custoLote * ax_loteporMes * 3) / 1000000;
+    }
+
+    var perdaLote = ax_custoLote * (12 / mesPerdeLote);
+    var multaTotal = custoMulta + custoInterdicao;
+    var ganhoMonitoramento = (multaTotal * 1000000) + perdaLote - custoMonitoramento;
+
+    function formatar(valor) {
+      if (valor >= 1000000000) return `R$${(valor / 1e9).toFixed(3)} bilhões`;
+      if (valor >= 1000000) return `R$${(valor / 1e6).toFixed(3)} milhões`;
+      if (valor >= 1000) return `R$${(valor / 1e3).toFixed(3)} mil`;
+      return `R$${valor.toFixed(2)}`;
+    }
+
+    var perdaFormatada = formatar(perdaLote);
+    var multaValor = multaTotal * 1000000;
+    var multaFormatada = formatar(multaValor);
+    var perdaTotalValor = multaValor + perdaLote;
+    var perdaTotalFormatada = formatar(perdaTotalValor);
+    var custoFormatado = formatar(custoMonitoramento);
+    var ganhoFormatado = formatar(ganhoMonitoramento);
+
+    resultado.innerHTML = `
+        <br>
+        <h3>Bem-vindo(a), ${ax_nome}!</h3>
+        Com base em dados do setor botânico e perdas comuns na produção de orquídeas sensíveis à luminosidade, como a orquídea borbovara:
+        <br><br>
+        Sua empresa, sendo de <u>porte ${ax_tamanho}</u>, pode perder até <b>${perdaFormatada}</b> ao ano sem o controle adequado de luminosidade.
+        <br><br>
+        Com risco <u>${ax_risco}</u>, os danos podem ultrapassar <b>${multaFormatada}</b> entre perdas indiretas, descarte de plantas e impactos em produtividade.
+        <br><br>
+        O impacto total pode chegar a <b>${perdaTotalFormatada}</b>!
+        <br><br>
+        Investindo apenas <b>${custoFormatado}</b> na nossa solução de monitoramento, o potencial de economia pode chegar a <b>${ganhoFormatado}</b> ao ano.
+        <br><br>
+        🌿 Garanta a qualidade das suas orquídeas e a saúde financeira da sua botânica!
+      `;
   }
 
 </script>
